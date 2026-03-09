@@ -1,0 +1,14 @@
+h1,h2,h3,p {
+  text-align: center;
+}
+
+ul {
+  list-style-position: inside;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
