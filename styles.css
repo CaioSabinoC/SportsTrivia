@@ -1,0 +1,78 @@
+body{ 
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    background-image: url("./imagem.jpg"); 
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;     
+    background-size:cover;
+}
+
+.button1{
+    background: transparent;   
+    border: 5px solid white;  
+    color: white;
+    font-size: clamp(14px, 2vw, 18px);
+    padding: 10px 25px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button1:hover{
+    background: #00BFFF;
+    color: black;
+}
+
+.curiosidade{
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.tela{
+    position:absolute;
+    top:12%;
+    left:15%;
+    width:70%;
+    height:40%;
+    text-align:center;
+}
+
+.h1{
+    font-size: clamp(20px, 4vw, 40px);
+}
+
+@media (max-width: 600px){
+
+    body{
+        padding:20px;
+        height:auto;
+    }
+
+    .tela{
+        top:10%;
+        left:10%;
+        width:80%;
+        height:45%;
+    }
+
+    .button1{
+        border:3px solid white;
+        padding:8px 18px;
+        font-size:16px;
+    }
+
+    .h1{
+        font-size:24px;
+    }
+
+    .curiosidade{
+        font-size:14px;
+        padding:10px;
+    }
+}
