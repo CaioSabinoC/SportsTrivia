@@ -2,32 +2,48 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
+  <!-- RESPONSIVIDADE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO -->
+  <meta name="description" content="Descubra curiosidades incríveis sobre esportes">
+  <!-- PWA -->
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="manifest.json">
   <title>Sports Trivia</title>
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
+  <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
 </head>
 
-
-
 <body>
 
-<div class="placar">
-    
-    <div class="tela">
-        <h1>Sports Trivia</h1>
+<main class="container">
 
-        <button class="button1" onclick="getCuriosidade()">Discover</button>
+    <h1 class="h1">Sports Trivia</h1>
 
-        <div id="curiosidade">
-            <p>Click the button to discover something new.</p>
-        </div>
+    <button class="button1" id="btnCuriosidade" aria-label="Descobrir curiosidade">
+        Discover
+    </button>
 
+    <div id="curiosidade" class="curiosidade">
+        <p>Click the button to discover something new.</p>
     </div>
 
-</div>
+</main>
 
- <script src="script.js"></script>
-</div>
+<script src="script.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log('Service Worker registrado:', reg))
+      .catch(err => console.log('Erro no Service Worker:', err));
+  });
+}
+</script>
+
+
 </body>
 </html>
