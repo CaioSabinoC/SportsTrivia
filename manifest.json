@@ -1,0 +1,28 @@
+{
+  "background_color": "#3a4cce",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Trivia Sports",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Trivia Sports",
+  "start_url": "/",
+  "theme_color": "#3a4cce",
+  "description": "Descubra várias curiosidades sobre esportes",
+  "lang": "en",
+  "categories": [
+    "entertainment"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
