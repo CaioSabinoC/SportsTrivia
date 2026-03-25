@@ -1,81 +1,73 @@
-body{ 
+body { 
     font-family: 'Orbitron', sans-serif;
     color: white;
-    background-image: url("./imagem.jpg"); 
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;     
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+    background: url("./imagem.jpg") center/cover no-repeat;
+    margin: 0;
+    
+    min-height: 100dvh; /* melhor que 100vh */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.button1{
+/* overlay escuro pra melhorar leitura */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* botão melhorado */
+.button1 {
+    width: 100%;
     background: transparent;   
-    border: 5px solid white;  
+    border: 3px solid white;  
     color: white;
-    font-size: clamp(14px, 2vw, 18px);
-    padding: 10px 25px;
-    font-size: 18px;
-    border-radius: 6px;
+    font-size: 16px;
+    padding: 14px;
+    border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.button1:hover{
+.button1:hover {
     background: #00BFFF;
     color: black;
 }
 
-.curiosidade{
-    margin-top: 10px;
-    align-items: center;
-    text-align: center;
-    
+/* título */
+.h1 {
+    font-size: clamp(22px, 5vw, 36px);
+    margin-bottom: 20px;
 }
 
-.tela{
-    position:absolute;
-    top:12%;
-    left:15%;
-    width:70%;
-    height:40%;
-    text-align:center;
+/* texto */
+.curiosidade {
+    margin-top: 15px;
+    font-size: 14px;
 }
 
-.h1{
-    font-size: clamp(20px, 4vw, 40px);
-}
-
+/* mobile */
 @media (max-width: 600px){
-
-    body{
-        padding:20px;
-        height:auto;
+    body {
+        padding: 20px;
     }
 
-    .tela{
-        top:10%;
-        left:10%;
-        width:80%;
-        height:45%;
+    .button1 {
+        font-size: 15px;
+        padding: 12px;
     }
 
-    .button1{
-        border:3px solid white;
-        padding:8px 18px;
-        font-size:16px;
-    }
-
-    .h1{
-        font-size:24px;
-    }
-
-    .curiosidade{
-        font-size:14px;
-        padding:10px;
+    .curiosidade {
+        font-size: 13px;
     }
 }
