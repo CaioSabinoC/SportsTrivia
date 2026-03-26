@@ -109,13 +109,19 @@ body::before {
     }
 }
 
+.respostas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
 .resposta {
     width: 100%;
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.3);
     color: white;
     padding: 12px;
-    margin: 6px 0;
     border-radius: 8px;
     text-align: left;
     cursor: pointer;
@@ -125,6 +131,7 @@ body::before {
 
 .resposta:hover {
     background: rgba(255,255,255,0.15);
+    border-color: #00BFFF;
 }
 
 .resposta:active {
