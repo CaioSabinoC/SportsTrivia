@@ -6,7 +6,7 @@ btn.addEventListener("click", async () => {
     try {
         box.innerHTML = "<p>Loading...</p>";
 
-        let response = await fetch("https://opentdb.com/api.php?amount=5&category=21&type=multiple");
+        let response = await fetch("https://opentdb.com/api.php?amount=1&category=21&type=multiple");
 
         if (!response.ok) {
             throw new Error("Erro na API");
@@ -14,7 +14,7 @@ btn.addEventListener("click", async () => {
 
         let data = await response.json();
 
-        let curiosidade = data.results[Math.floor(Math.random() * data.results.length)];
+        let curiosidade = data.results[0];
 
         // embaralhar respostas
         let respostas = [...curiosidade.incorrect_answers, curiosidade.correct_answer];
