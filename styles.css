@@ -4,14 +4,13 @@ body {
     background: url("./imagem.jpg") center/cover no-repeat;
     margin: 0;
     
-    min-height: 100dvh; /* melhor que 100vh */
+    min-height: 100dvh;
     
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* overlay escuro pra melhorar leitura */
 body::before {
     content: "";
     position: fixed;
@@ -26,7 +25,6 @@ body::before {
     text-align: center;
 }
 
-/* botão melhorado */
 .button1 {
     width: 100%;
     background: transparent;   
@@ -44,19 +42,16 @@ body::before {
     color: black;
 }
 
-/* título */
 .h1 {
     font-size: clamp(22px, 5vw, 36px);
     margin-bottom: 20px;
 }
 
-/* texto */
 .curiosidade {
     margin-top: 15px;
     font-size: 14px;
 }
 
-/* mobile */
 @media (max-width: 600px){
     body {
         padding: 20px;
@@ -69,5 +64,47 @@ body::before {
 
     .curiosidade {
         font-size: 13px;
+    }
+}
+
+#splash {
+    position: fixed;
+    inset: 0;
+    background: #0f172a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 2px;
+
+    opacity: 0;
+    transform: scale(0.9);
+
+    animation: logoIn 0.6s ease forwards;
+}
+
+@keyframes logoIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.6s ease forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
     }
 }
